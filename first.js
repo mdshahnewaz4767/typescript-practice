@@ -28,3 +28,32 @@ multiply2 = function (x, y) { return x * y; };
 var multiply = function (x, y) { return x * y; };
 console.log(multiply(2, 6));
 //===End arrow function type==//
+//===Array and Object type==//
+var number = [3, 10, 22, 30, 40, 50, 60];
+number.push(22);
+// console.log(number);
+var friends = ['Newaz', 'Shahnewaz', 'Muhammad', 'Mun'];
+var megaName = '';
+for (var i = 0; i < friends.length; i++) {
+    var name_1 = friends[i];
+    if (name_1.length > megaName.length) {
+        megaName = name_1;
+    }
+}
+console.log('Largest Name:', megaName);
+//Object
+var friend = {
+    name: 'newaz',
+    age: 23
+};
+friend.age = 27;
+console.log(friend.age);
+//Another easy way
+var player;
+player = {
+    name: 'Muhammad Shahnewaz',
+    age: 23,
+    salary: 50000,
+};
+console.log(player);
+//===End Array and Object type==//

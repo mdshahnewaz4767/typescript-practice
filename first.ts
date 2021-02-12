@@ -62,18 +62,51 @@ console.log(friend.age);
 
 
 //Another easy way
-let player: {                  //types
-    name: string,
-    age: number,
-    salary: number;
-}
-player = {        // value declarations
-    name: 'Muhammad Shahnewaz',
-    age: 23,
-    salary: 50000,
-}
-console.log(player);
-
-
+// let player: {                  //types
+//     name: string,
+//     age: number,
+//     salary: number;
+// }
+// player = {        // value declarations
+//     name: 'Muhammad Shahnewaz',
+//     age: 23,
+//     salary: 50000,
+// }
+// console.log(player);
 
 //===End Array and Object type==//
+
+
+//===Interface and use complex parameter type===//
+interface Player {   // Interface means a Structure or sample
+    club:string,
+    name: string,
+    salary: number,
+    wife?: string,
+    age: number;
+    isPlaying: boolean;
+}
+const neymar: Player = {
+    name: 'Neymar',
+    club: 'Paris',
+    salary: 500000,
+    wife: 'Some name',
+    age: 22,
+    isPlaying: true
+}
+
+const ronaldo: Player = {
+    name: 'Ronaldo',
+    club: 'Liverpool',
+    salary: 3000000,
+    age: 30,
+    wife: 'Some name',
+    isPlaying: false
+}
+
+function getBonus(player: Player, friends: string[]){
+    return player.salary * 0.1;
+}
+const poorPlayer = {age:30, salary: 10000};
+getBonus(neymar, ['Muhammad', 'Shahnewaz']);
+//===End Interface and use complex parameter type===//
