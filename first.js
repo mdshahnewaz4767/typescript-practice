@@ -48,12 +48,47 @@ var friend = {
 };
 friend.age = 27;
 console.log(friend.age);
-//Another easy way
-var player;
-player = {
-    name: 'Muhammad Shahnewaz',
-    age: 23,
-    salary: 50000,
+var neymar = {
+    name: 'Neymar',
+    club: 'Paris',
+    salary: 500000,
+    wife: 'Some name',
+    age: 22,
+    isPlaying: true
 };
-console.log(player);
-//===End Array and Object type==//
+var ronaldo = {
+    name: 'Ronaldo',
+    club: 'Liverpool',
+    salary: 3000000,
+    age: 30,
+    wife: 'Some name',
+    isPlaying: false
+};
+function getBonus(player, friends) {
+    return player.salary * 0.1;
+}
+var poorPlayer = { age: 30, salary: 10000 };
+getBonus(neymar, ['Muhammad', 'Shahnewaz']);
+//===End Interface and use complex parameter type===//
+//===type in class===//
+var person = /** @class */ (function () {
+    function person(name, father) {
+        this.name = name;
+        this.partner = name;
+        this.fatherName = father;
+    }
+    person.prototype.getName = function () {
+        return this.name;
+    };
+    return person;
+}());
+//normal
+var newaz = new person('Shahnewaz', 'Khondokar');
+console.log('Name:', newaz.name, newaz.fatherName);
+var newazName = newaz.getName();
+console.log(newazName);
+// //private
+// newaz.partner = 'Dona know';
+// //readonly
+// newaz.fatherName = 'Ben Zu';
+//===End type in class===//

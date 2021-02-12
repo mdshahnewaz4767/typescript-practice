@@ -110,3 +110,34 @@ function getBonus(player: Player, friends: string[]){
 const poorPlayer = {age:30, salary: 10000};
 getBonus(neymar, ['Muhammad', 'Shahnewaz']);
 //===End Interface and use complex parameter type===//
+
+
+
+//===type in class===//
+class person{
+    name: string;
+    private partner: string;
+    readonly fatherName: string;
+    constructor(name: string, father: string){
+        this.name = name;
+        this.partner = name;
+        this.fatherName = father;
+    }
+    getName():string {
+        return this.name;
+    }
+}
+//normal
+const newaz = new person('Shahnewaz', 'Khondokar');
+console.log('Name:', newaz.name, newaz.fatherName);
+
+const newazName = newaz.getName();
+console.log(newazName);
+// //private
+// newaz.partner = 'Dona know';
+
+// //readonly
+// newaz.fatherName = 'Ben Zu';
+
+
+//===End type in class===//
