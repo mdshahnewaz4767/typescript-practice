@@ -139,5 +139,4 @@ console.log(newazName);
 // //readonly
 // newaz.fatherName = 'Ben Zu';
 
-
 //===End type in class===//
